@@ -1,0 +1,15 @@
+.personShowContainer {
+  margin-top: 20px;
+  display: flex;
+}
+
+.headImage {
+  width: 50px;
+  height: 50px;
+}
+
+.content {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+}

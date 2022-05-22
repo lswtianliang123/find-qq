@@ -3,16 +3,9 @@ import {
   SET_ERROR_INFO,
   SET_PERSON_INFO,
 } from "../../constants/actionTypes";
+import initialState from "./initialValue";
 
-import type { ReduxState } from "../../types";
 import type { AnyAction } from "redux";
-
-const initialState: ReduxState = {
-  error: undefined,
-  loading: false,
-  headUrl: "",
-  nickName: "",
-};
 
 export default (state = initialState, action: AnyAction) => {
   switch (action.type) {
@@ -23,7 +16,7 @@ export default (state = initialState, action: AnyAction) => {
       return { ...state, error: action.error };
 
     case SET_PERSON_INFO:
-      return { ...state, headUrl: action.headUrl, nickName: action.nickName };
+      return { ...state, ...action.personInfo };
 
     default:
       return state;

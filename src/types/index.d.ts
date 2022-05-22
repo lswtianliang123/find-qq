@@ -1,7 +1,14 @@
 import type { AnyAction } from "redux";
 
+export interface BackendPersonInfo {
+  code: number;
+  qq: string;
+  name: string;
+  qlogo: string;
+}
+
 export interface PersonInfo {
-  qqNumber?: number;
+  qqNumber?: number | string;
   headUrl: string;
   nickName: string;
 }

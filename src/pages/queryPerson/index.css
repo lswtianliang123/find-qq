@@ -1,0 +1,14 @@
+.queryContainer {
+  margin: 30px;
+}
+
+.qqText {
+  width: 200px;
+  margin-left: 10px;
+}
+
+.inValidQQ {
+  margin-top: 5px;
+  margin-left: 30px;
+  color: red;
+}

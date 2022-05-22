@@ -1,46 +1,46 @@
-# Getting Started with Create React App
+# QQ 查询 demo 项目
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 安装
 
-## Available Scripts
+yarn
 
-In the project directory, you can run:
+## 启动
 
-### `yarn start`
+yarn start
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 业务说明
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+用户输入 5 到 10 位合法的 qq 号，可通过开发免费接口查询到头像，昵称等内容
 
-### `yarn test`
+## 技术方案说明
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+本项目为简单演示代码思路，基础框架的目的，简单融入了 react 全家桶能力。
+如 react-router-dom， react-redux， redux-thunk 等基础库，并对他们进行打通
 
-### `yarn build`
+同时，引入 lodash 这个基础工具库，用它的 debounce 防抖功能减少中间不必要的 api 查询
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+鉴于当前阶段功能十分简单，引入 axios 库，并做了简洁封装调用
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 文件夹职责说明
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+components --- 存放普通展示组件
 
-### `yarn eject`
+pages --- 存放页面级别的容器组件
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+constants --- 常量
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+redux --- redux 的相关，如 actions，reducers, store 等
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+services --- 调用后端 api 的服务层
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+types --- ts 类型定义
 
-## Learn More
+utils ---- 工具方法
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 关于单元测试
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+从成本和时间考虑，当下只对功能比较稳定 **utils** 工具方法做了单元测试
+
+## 关于交付
+
+从工程和最终交互的角度来说，还需要进一步的完善架构，并对功能做更多的测试和防御，当下只是演示目的
